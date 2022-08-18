@@ -1,3 +1,8 @@
+window.onload = init;
+function init() {
+  newQuote();
+}
+
 const quotesArray = [
   {
     author: "Jake, Adventure Time",
@@ -21,19 +26,21 @@ const quotesArray = [
   }
 ];
 
-let quoteText = '';
-let quoteAuthor = '';
-let randomIndex = Math.floor(Math.random() * quotesArray.length);
 
-function getRandomQuote () {
-  console.log(quotesArray[randomIndex]);
-  return quotesArray[randomIndex];
-}
 
 function newQuote() {
-  let randomQuote = getRandomQuote();
+  let randomIndex = Math.floor(Math.random() * quotesArray.length);
+  let randomQuote = quotesArray[randomIndex];
   let quoteText = randomQuote.quote;
   let quoteAuthor = randomQuote.author;
-
   
+  let originalTwitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&text=";
+  let quoteInApi = quoteText.replace(/ /g, "%20");
+  let authorInApi = quoteAuthor.replace(/ /g, "%20");
+
+  let twitterLink = originalTwitterLink + '"' + quoteInApi + '" ' + "~ " + authorInApi;
+
+  document.getElementById("tweet-quote").href = twitterLink;
+  document.getElementById("text").innerText = quoteText;
+  document.getElementById("author").innerText = `~ ${quoteAuthor}`;
 }

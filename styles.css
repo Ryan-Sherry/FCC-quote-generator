@@ -1,3 +1,14 @@
+:root {
+  --color1: rgb(0, 204, 255);
+  --color2: rgb(255, 38, 0);
+  --color3:rgba(59, 241, 3, 0.966);
+  --color4: rgba(150, 31, 150, 0.87);
+  --color5: rgb(255, 255, 41);
+  --color6:orange;
+  --color7:rgb(25, 82, 156);
+  --color8: rgb(238, 2, 199);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,13 +23,93 @@ html, body, main {
 main {
   background-color: black;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+i {
+  padding: 9px;
+}
+
+button {
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  width: 90px;
+  height: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 #quote-box {
-  width:50%;
+  width:40%;
   height: 45%;
   margin: auto auto;
+  padding: 20px;
   background-color: white;
   border-radius: 15px;
+  display: grid;
+  grid-template-rows: 50% 30% 20%;
+}
+
+#text {
+  width: 90%;
+  height: auto;
+  border: solid 1px purple;
+  margin: 5px auto 3px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#author {
+  width: 90%;
+  height: 80%;
+  border: solid 1px orange;
+  margin: 5px auto 3px auto;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#wordy-words {
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+#socials {
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  border-radius: 8px;
+}
+
+#my-name {
+  margin-top: 60px;
+  height:20%;
+  width: 100%;
+  text-align: center;
+}
+
+.fa-twitter {
+  text-align: center;
+  vertical-align: center;
+}
+
+.white-words {
+  color: white;
+}
+
+.space {
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: solid 1px green;
 }
