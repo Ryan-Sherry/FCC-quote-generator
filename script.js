@@ -26,7 +26,16 @@ const quotesArray = [
   }
 ];
 
-
+const colorArray = [
+  "rgb(55, 207, 245)",
+  "rgb(253, 69, 37)",
+  "rgba(90, 224, 49, 0.966)",
+  "rgba(148, 56, 148, 0.87)",
+  "rgb(245, 245, 0)",
+  "rgb(245, 179, 58)",
+  "rgb(51, 94, 151)",
+  "rgb(207, 109, 191)"
+];
 
 function newQuote() {
   let randomIndex = Math.floor(Math.random() * quotesArray.length);
@@ -41,6 +50,21 @@ function newQuote() {
   let twitterLink = originalTwitterLink + '"' + quoteInApi + '" ' + "~ " + authorInApi;
 
   document.getElementById("tweet-quote").href = twitterLink;
-  document.getElementById("text").innerText = quoteText;
+  document.getElementById("text").innerText = `"${quoteText}"`;
   document.getElementById("author").innerText = `~ ${quoteAuthor}`;
+  newColors();
+}
+
+function newColors() {
+  let colorIndex = Math.floor(Math.random() * colorArray.length);
+  let randomColor = colorArray[colorIndex];
+  let colorsOne = document.getElementsByClassName("background-change");
+  let colorsTwo = document.getElementsByClassName("color-change");
+  
+  for (let i=0; i<colorArray.length; i++) {
+    colorsOne[i].style.backgroundColor = randomColor;
+  }
+  for (let i=0; i<colorArray.length; i++) {
+    colorsTwo[i].style.color = randomColor;
+  }
 }
