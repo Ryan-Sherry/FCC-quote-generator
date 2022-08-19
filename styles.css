@@ -1,12 +1,12 @@
 :root {
-  --color1: rgb(0, 204, 255);
-  --color2: rgb(255, 38, 0);
-  --color3:rgba(59, 241, 3, 0.966);
-  --color4: rgba(150, 31, 150, 0.87);
+  --color1: rgb(55, 207, 245);
+  --color2: rgb(253, 69, 37);
+  --color3:rgba(90, 224, 49, 0.966);
+  --color4: rgba(148, 56, 148, 0.87);
   --color5: rgb(255, 255, 41);
-  --color6:orange;
-  --color7:rgb(25, 82, 156);
-  --color8: rgb(238, 2, 199);
+  --color6:rgb(245, 179, 58);
+  --color7:rgb(51, 94, 151);
+  --color8: rgb(207, 109, 191);
 }
 
 * {
@@ -21,7 +21,6 @@ html, body, main {
 }
 
 main {
-  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +31,6 @@ i {
 }
 
 button {
-  background-color: black;
   border: none;
   border-radius: 8px;
   width: 90px;
@@ -58,6 +56,7 @@ button:hover {
   width: 90%;
   height: auto;
   border: solid 1px purple;
+  text-align: center;
   margin: 5px auto 3px auto;
   display: flex;
   align-items: center;
@@ -72,6 +71,7 @@ button:hover {
   text-align: right;
   display: flex;
   justify-content: flex-end;
+  font-style: italic;
 }
 
 #wordy-words {
@@ -80,7 +80,6 @@ button:hover {
 }
 
 #socials {
-  background-color: black;
   width: 35px;
   height: 35px;
   border-radius: 8px;
@@ -112,4 +111,12 @@ button:hover {
   flex-direction: row;
   justify-content: space-evenly;
   border: solid 1px green;
+}
+
+.background-change {
+  background-color: black;
+}
+
+.color-change {
+  color: black;
 }
