@@ -18,23 +18,45 @@ const quotesArray = [
   },
   {
     author: "Winnie the Pooh",
-    quote: " You're brave than you believe, stronger than you seem, and smarter than you think."
+    quote: "You're brave than you believe, stronger than you seem, and smarter than you think."
   },
   {
     author: "Jim, The Office",
     quote: "Bears. Beets. Battlestar Galactica."
+  },
+  {
+    author: "Some Guy, Rocket League",
+    quote: "You miss 100% of the aerials you don't take."
+  },
+  {
+    author: "Damos, Jak 3",
+    quote: "This world is not yet out of heroes."
+  },
+  {
+    author: "Hollow Knight",
+    quote: "If our lives are but a spark in the eyes of gods, then let us blind them at least once."
+  },
+  {
+    author: "Unknown",
+    quote: "Choose being right over being kind, and you'll be right every time."
+  },
+  {
+    author: "Albus Dumbledore",
+    quote: "Happiness can be found even in the drakest of times, if one only remembers to turn on the light."
   }
 ];
 
 const colorArray = [
   "rgb(55, 207, 245)",
   "rgb(253, 69, 37)",
-  "rgba(90, 224, 49, 0.966)",
+  "rgb(207, 0, 114)",
+  "rgb(56, 214, 51)",
   "rgba(148, 56, 148, 0.87)",
-  "rgb(245, 245, 0)",
-  "rgb(245, 179, 58)",
+  "rgb(255, 242, 66)",
+  "rgb(38, 118, 138)",
   "rgb(51, 94, 151)",
-  "rgb(207, 109, 191)"
+  "rgb(207, 109, 191)",
+  "rgb(245, 179, 58)"
 ];
 
 function newQuote() {
@@ -59,12 +81,8 @@ function newColors() {
   let colorIndex = Math.floor(Math.random() * colorArray.length);
   let randomColor = colorArray[colorIndex];
   let colorsOne = document.getElementsByClassName("background-change");
-  let colorsTwo = document.getElementsByClassName("color-change");
-  
+
   for (let i=0; i<colorArray.length; i++) {
     colorsOne[i].style.backgroundColor = randomColor;
-  }
-  for (let i=0; i<colorArray.length; i++) {
-    colorsTwo[i].style.color = randomColor;
   }
 }
