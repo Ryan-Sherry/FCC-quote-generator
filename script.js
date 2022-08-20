@@ -85,4 +85,4 @@ function newColors() {
   for (let i=0; i<colorArray.length; i++) {
     colorsOne[i].style.backgroundColor = randomColor;
   }
-}
+};

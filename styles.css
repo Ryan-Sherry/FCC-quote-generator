@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap');
 
-:root {
-  --color1: rgb(55, 207, 245);
-  --color2: rgb(253, 69, 37);
-  --color3:rgb(56, 214, 51);
-  --color4: rgba(148, 56, 148, 0.87);
-  --color5: rgb(255, 242, 66);
-  --color6:rgb(245, 179, 58);
-  --color7:rgb(51, 94, 151);
-  --color8: rgb(207, 109, 191);
-  --color9: rgb(207, 0, 114);
-  --color10: rgb(38, 118, 138);
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -119,12 +106,4 @@ button:hover {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.background-change {
-  background-color: black;
-}
-
-.color-change {
-  color: black;
 }
